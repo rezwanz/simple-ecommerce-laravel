@@ -23,7 +23,13 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'role:user'])->name('dashboard');
 
-Route::get('/userprofile', [DashboardController::class, 'Index']);
+Route::middleware(['auth', 'role:user'])->group(function(){
+    Route::controller(DashboardController::class)->group(function (){
+        Route::get('/admin/dashboard', 'Index');
+    });
+});
+
+//Route::get('/userprofile', [DashboardController::class, 'Index']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
