@@ -1,6 +1,6 @@
 @extends('admin.layouts.template')
 @section('content')
 
-Hello from Dashboard
+    Hello from Pending Orders
 
 @endsection
