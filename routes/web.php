@@ -15,7 +15,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'role:user'])->name('dashboard');
+})->middleware(['auth', 'role:admin'])->name('dashboard');
 
 Route::middleware(['auth', 'role:user'])->group(function(){
     Route::controller(DashboardController::class)->group(function (){
