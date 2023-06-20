@@ -5,17 +5,17 @@
 @section('content')
 
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Page/</span> All Sub Category</h4>
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Page/</span> All Products</h4>
         <div class="card">
-            <h5 class="card-header">All product</h5>
+            <h5 class="card-header">All products List</h5>
             <div class="table-responsive text-nowrap">
                 <table class="table">
                     <thead class="table-light">
                     <tr>
                         <th>ID</th>
-                        <th>Sub Category Name</th>
-                        <th>Category</th>
-                        <th>Product</th>
+                        <th>Product Name</th>
+                        <th>Image</th>
+                        <th>Price</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
@@ -23,8 +23,8 @@
                     <tr>
                         <td>1</td>
                         <td>Mobile</td>
-                        <td>Electronics</td>
-                        <td>10</td>
+                        <td></td>
+                        <td>100</td>
                         <td>
                             <a href="edit" class="btn btn-primary">Edit</a>
                             <a href="delete" class="btn btn-danger">Delete</a>
