@@ -20,7 +20,6 @@
                         <th>ID</th>
                         <th>Category Name</th>
                         <th>Sub Category</th>
-                        <th>Product</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
@@ -29,11 +28,11 @@
                     <tr>
                         <td>{{ $category->id }}</td>
                         <td>{{ $category->category_name }}</td>
-                        <td>{{ $category->category_count }}</td>
+                        <td>{{ $category->subcategory_count }}</td>
                         <td>{{ $category->slug }}</td>
                         <td>
-                            <a href="edit" class="btn btn-primary">Edit</a>
-                            <a href="delete" class="btn btn-danger">Delete</a>
+                            <a href="{{ route('editcategory', $category->id) }}" class="btn btn-primary">Edit</a>
+                            <a href="{{ route('deletecategory', $category->id) }}" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                     @endforeach
